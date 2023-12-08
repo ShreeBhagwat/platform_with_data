@@ -1,5 +1,6 @@
 import UIKit
 import Flutter
+import workmanager
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -7,6 +8,15 @@ import Flutter
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
+    
+    WorkmanagerPlugin.registerTask(withIdentifier: "task-identifier")
+    
+    
+    
+    
+    
+    
+    
     let controller = window?.rootViewController as! FlutterViewController
     
     let methodChannle = FlutterMethodChannel(name: "DIALOG", binaryMessenger: controller.binaryMessenger);
